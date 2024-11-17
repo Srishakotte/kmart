@@ -18,7 +18,7 @@ import phone03 from "../Images/phone-03.png";
 import phone04 from "../Images/phone-04.jpg";
 import phone05 from "../Images/phone-05.jpg";
 import phone06 from "../Images/phone-06.jpg";
-import phone08 from "../Images/phone-08.png";
+// import phone08 from "../Images/phone-08.png";
 
 import watch01 from "../Images/watch-01.jpg";
 import watch02 from "../Images/watch-02.jpg";
@@ -30,8 +30,8 @@ import wireless02 from "../Images/wireless-02.png";
 import wireless03 from "../Images/wireless-03.png";
 import wireless04 from "../Images/wireless-04.png";
 
-import sofaSlide from "../Images/hero-img.png";
-import watchSlide from "../Images/watch-07.png";
+// import sofaSlide from "../Images/hero-img.png";
+// import watchSlide from "../Images/watch-07.png";
 
 
 export const serviceData = [
