@@ -1,11 +1,7 @@
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addToCart,
-  decreaseQty,
-  deleteProduct,
-} from "../app/features/cart/cartSlice";
+import { addToCart, decreaseQty, deleteProduct } from "./cartSlice";
 
 const Cart = () => {
   const { cartList } = useSelector((state) => state.cart);
@@ -14,16 +10,20 @@ const Cart = () => {
     (price, item) => price + item.qty * item.price,
     0
   );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  console.log("Cart List:", cartList); // Add this to check cartList updates
+
   return (
     <section className="cart-items">
       <Container>
         <Row className="justify-content-center">
           <Col md={8}>
             {cartList.length === 0 && (
-              <h1 className="no-items product">No Items are add in Cart</h1>
+              <h1 className="no-items product">No Items are added to Cart</h1>
             )}
             {cartList.map((item) => {
               const productQty = item.price * item.qty;

@@ -1,17 +1,24 @@
 import { Col } from "react-bootstrap";
-import "./product-card.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import { useDispatch } from "react-redux";  // Import useDispatch
+import { addToCart } from "../../pages/cartSlice";  // Import addToCart action
+import "./product-card.css";
 
 const ProductCard = ({ title, productItem }) => {
+  const dispatch = useDispatch();  // Initialize dispatch
   const router = useNavigate();
+
   const handelClick = () => {
     router(`/shop/${productItem.id}`);
   };
+
   const handelAdd = (productItem) => {
+    // Dispatch the addToCart action
+    dispatch(addToCart({ product: productItem, num: 1 })); // Assuming adding 1 item to cart
     toast.success("Product has been added to cart!");
   };
+
   return (
     <Col md={3} sm={5} xs={10} className="product mtop">
       {title === "Big Discount" ? (

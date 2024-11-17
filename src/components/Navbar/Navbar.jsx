@@ -52,7 +52,7 @@ const NavBar = () => {
             </svg>
             <Link
               aria-label="Go to Cart Page"
-              to="/cart"
+              to="/cart" // Fixed this to point to /cart
               className="cart"
               data-num={"5"}
             >
@@ -105,7 +105,7 @@ const NavBar = () => {
               <Link
                 aria-label="Go to Cart Page"
                 className="navbar-link"
-                to="/"
+                to="/cart" // Fixed this to point to /cart
                 onClick={() => setExpand(false)}
               >
                 <span className="nav-link-label">Cart</span>
